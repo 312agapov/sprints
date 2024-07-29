@@ -54,13 +54,16 @@ public class MonthlyReport {
                 '}';
     }
 
-    public void fileWriter(int[] mass){
+    public void fileWriter(String fileName, List<MonthlyReport> mrs){
         try {
-            FileWriter fileWriter = new FileWriter("monthly1.txt");
+            FileWriter fileWriter = new FileWriter(fileName);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            for(int i=0; i<mass.length; i++){
-                bufferedWriter.write(mass[i] + " ");
+            for (int i=0; i < mrs.size(); i++){
+                bufferedWriter.write(mrs.get(i).getItemName()+",");
+                bufferedWriter.write(mrs.get(i).isExpense()+",");
+                bufferedWriter.write(mrs.get(i).getQuantity()+",");
+                bufferedWriter.write(mrs.get(i).getPriceOfOne()+"\n");
             }
 
             bufferedWriter.close();

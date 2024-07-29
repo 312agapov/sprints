@@ -1,0 +1,6 @@
+beans,true,1000,5
+baloons,false,1000,10
+bikes,true,1000,5
+cars,false,1000,10
+envelopes,false,1000,5
+pants,false,1000,10

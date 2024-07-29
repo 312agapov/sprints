@@ -22,5 +22,7 @@ public class Main {
             System.out.println(yrList.get(i));
         }
         yr.checkReports(yrList,mrList);
+
+        mr.fileWriter("write1.txt",mrList);
     }
 }
